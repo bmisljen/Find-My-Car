@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/boris/StudioProjects/Location/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
+        "source": "/home/boris/StudioProjects/Location/app/src/main/res/drawable-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/boris/StudioProjects/Location/location/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
+        "source": "/home/boris/StudioProjects/Location/location/src/main/res/drawable-ldpi/ic_launcher.png"
+    }
+]

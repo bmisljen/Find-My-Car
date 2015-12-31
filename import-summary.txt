@@ -1,0 +1,164 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* .idea/
+* .idea/.name
+* .idea/Location.iml
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* .metadata/
+* .metadata/.lock
+* .metadata/.mylyn/
+* .metadata/.mylyn/repositories.xml.zip
+* .metadata/.plugins/
+* .metadata/.plugins/org.eclipse.core.resources/
+* .metadata/.plugins/org.eclipse.core.resources/.root/
+* .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/
+* .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
+* .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+* .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version
+* .metadata/.plugins/org.eclipse.core.resources/.root/1.tree
+* .metadata/.plugins/org.eclipse.core.resources/.safetable/
+* .metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+* .metadata/.plugins/org.eclipse.core.runtime/
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.j2ee.webservice.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs
+* .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs
+* .metadata/.plugins/org.eclipse.e4.workbench/
+* .metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdt
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdx
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fnm
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.frq
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.nrm
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tii
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tis
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments.gen
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments_1
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdt
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdx
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fnm
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.frq
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.nrm
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tii
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tis
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments.gen
+* .metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments_1
+* .metadata/.plugins/org.eclipse.jdt.core/
+* .metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+* .metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+* .metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+* .metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+* .metadata/.plugins/org.eclipse.jdt.ui/
+* .metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+* .metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+* .metadata/.plugins/org.eclipse.m2e.logback.configuration/
+* .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+* .metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.6.2.20150902-0002.xml
+* .metadata/.plugins/org.eclipse.oomph.setup/
+* .metadata/.plugins/org.eclipse.oomph.setup/workspace.setup
+* .metadata/.plugins/org.eclipse.pde.core/
+* .metadata/.plugins/org.eclipse.pde.core/.cache/
+* .metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+* .metadata/.plugins/org.eclipse.rse.core/
+* .metadata/.plugins/org.eclipse.rse.core/.log
+* .metadata/.plugins/org.eclipse.rse.core/initializerMarks/
+* .metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark
+* .metadata/.plugins/org.eclipse.rse.core/profiles/
+* .metadata/.plugins/org.eclipse.rse.core/profiles/PRF.boris-k55a_9/
+* .metadata/.plugins/org.eclipse.rse.core/profiles/PRF.boris-k55a_9/FP.local.files_0/
+* .metadata/.plugins/org.eclipse.rse.core/profiles/PRF.boris-k55a_9/FP.local.files_0/node.properties
+* .metadata/.plugins/org.eclipse.rse.core/profiles/PRF.boris-k55a_9/H.local_16/
+* .metadata/.plugins/org.eclipse.rse.core/profiles/PRF.boris-k55a_9/H.local_16/node.properties
+* .metadata/.plugins/org.eclipse.rse.core/profiles/PRF.boris-k55a_9/node.properties
+* .metadata/.plugins/org.eclipse.rse.ui/
+* .metadata/.plugins/org.eclipse.rse.ui/.log
+* .metadata/.plugins/org.eclipse.ui.ide/
+* .metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+* .metadata/.plugins/org.eclipse.ui.workbench/
+* .metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+* .metadata/version.ini
+* README.md
+* RemoteSystemsTempFiles/
+* RemoteSystemsTempFiles/.project
+* ic_launcher-web.png
+* proguard-project.txt
+* server.apk
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

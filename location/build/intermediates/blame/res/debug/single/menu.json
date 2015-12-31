@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/boris/StudioProjects/Location/location/build/intermediates/res/merged/debug/menu/activity_main.xml",
+        "source": "/home/boris/StudioProjects/Location/location/src/main/res/menu/activity_main.xml"
+    },
+    {
+        "merged": "/home/boris/StudioProjects/Location/app/build/intermediates/res/merged/debug/menu/activity_main.xml",
+        "source": "/home/boris/StudioProjects/Location/app/src/main/res/menu/activity_main.xml"
+    }
+]
