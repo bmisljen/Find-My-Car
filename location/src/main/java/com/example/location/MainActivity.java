@@ -21,9 +21,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.app.AlertDialog;
 import android.text.InputType;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 
 public class MainActivity extends Activity implements LocationListener{
 	 LocationProvider provider;
@@ -302,7 +311,16 @@ public class MainActivity extends Activity implements LocationListener{
         @Override
 	    public void onSaveInstanceState(Bundle savedInstanceState) {
 	        super.onSaveInstanceState(savedInstanceState);
-            // savedInstanceState.putSerializable("HashMap", hashmap);
+            File file = new File(getDir("data", MODE_PRIVATE), "hashmap");
+            try {
+                ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));
+                outputStream.writeObject(hashmap);
+                outputStream.flush();
+                outputStream.close();
+            } catch (IOException e) {
+                Toast toast = Toast.makeText(this, "Error writing writing saved locations", Toast.LENGTH_SHORT);
+                toast.show();
+            }
 	    }
             
 	    /**
@@ -326,7 +344,20 @@ public class MainActivity extends Activity implements LocationListener{
         @Override
 	    public void onRestoreInstanceState(Bundle savedInstanceState) {
 	        super.onRestoreInstanceState(savedInstanceState);
-            // hashmap = (HashMap) savedInstanceState.getSerializable("HashMap");
+            File file = new File(getDir("data", MODE_PRIVATE), "hashmap");
+            try {
+                ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
+                try {
+                    hashmap = (HashMap) inputStream.readObject();
+                } catch (ClassNotFoundException e1)
+                {
+
+                }
+                inputStream.close();
+            } catch (IOException e) {
+                Toast toast = Toast.makeText(this, "Error getting saved locations", Toast.LENGTH_SHORT);
+                toast.show();
+            }
         }
 		
     private class Coordinate {
