@@ -8,7 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Latitude and Longitude Free" />
+            <option value="$PROJECT_DIR$/Find My Car" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

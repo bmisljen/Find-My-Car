@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Latitude and Longitude Free/Latitude and Longitude Free.iml" filepath="$PROJECT_DIR$/Latitude and Longitude Free/Latitude and Longitude Free.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Find My Car/Find My Car.iml" filepath="$PROJECT_DIR$/Find My Car/Find My Car.iml" />
       <module fileurl="file://$PROJECT_DIR$/locationapp.iml" filepath="$PROJECT_DIR$/locationapp.iml" />
     </modules>
   </component>
