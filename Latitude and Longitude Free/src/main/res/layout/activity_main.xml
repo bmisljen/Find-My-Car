@@ -3,55 +3,43 @@
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
     android:orientation="horizontal"
+    android:background="@color/light_grey"
     android:weightSum="1.0" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="location"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:background="#b0bec5" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="map"
-        android:layout_below="@+id/button1"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignStart="@+id/button1"
-        android:layout_marginTop="20dp"
-        android:background="#b0bec5"
-        android:gravity="center" />
+        android:layout_below="@+id/TextView02"
+        android:layout_marginTop="30dp"
+        android:background="#fed136"
+        android:gravity="center"
+        android:text="view map" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="save location"
-        android:layout_below="@+id/TextView02"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignStart="@+id/button1"
-        android:layout_marginTop="20dp"
-        android:background="#b0bec5"
-        android:gravity="center" />
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="23dp"
+        android:background="#fed136"
+        android:gravity="center"
+        android:text="save parking location" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="go to saved location"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
         android:layout_below="@+id/button3"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignStart="@+id/button1"
-        android:layout_marginTop="20dp"
-        android:background="#b0bec5"
-        android:gravity="center" />
+        android:layout_marginTop="30dp"
+        android:background="#ADFF2F	"
+        android:gravity="center"
+        android:text="navigate to car" />
 
     <requestFocus />
 
@@ -59,7 +47,7 @@
         android:id="@+id/TextView02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="LONGITUDE"
+        android:text="LONGITUDE:"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dip"
@@ -74,7 +62,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dip"
-        android:gravity="center"
-        android:layout_below="@+id/button2" />
+        android:gravity="center" />
 
 </RelativeLayout>
