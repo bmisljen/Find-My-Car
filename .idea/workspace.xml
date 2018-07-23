@@ -10,57 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3d0570-bf88-4154-aa35-35da46d2289e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/Latitude and Longitude Free-release.apk" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/Latitude and Longitude Free.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build.gradle" afterPath="$PROJECT_DIR$/Find My Car/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/generated/source/buildConfig/debug/com/lattitudeandlongitude/location/BuildConfig.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/generated/source/r/debug/com/lattitudeandlongitude/location/R.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/BuildConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/MainActivity$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/MainActivity$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/MainActivity$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/MainActivity$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/MainActivity$Coordinate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/MainActivity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$attr.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$dimen.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$drawable.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$id.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$layout.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$menu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$string.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R$style.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/classes/debug/com/lattitudeandlongitude/location/R.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/incremental/compileDebugAidl/dependency.store" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/java/com/lattitudeandlongitude/location/MainActivity.java" afterPath="$PROJECT_DIR$/Find My Car/src/main/java/com/lattitudeandlongitude/location/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-hdpi/ic_action_search.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-hdpi/ic_action_search.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-hdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-ldpi/ic_launcher.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-ldpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-mdpi/ic_action_search.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-mdpi/ic_action_search.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-xhdpi/ic_action_search.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-xhdpi/ic_action_search.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/drawable-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/drawable-xhdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/menu/activity_main.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/menu/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values-large/dimens.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values-large/dimens.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values-v11/styles.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values-v11/styles.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values-v14/styles.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values-v14/styles.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values/colors.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values/dimens.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/Latitude and Longitude Free/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/Find My Car/src/main/res/values/styles.xml" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-    </list>
+    <list default="true" id="0e3d0570-bf88-4154-aa35-35da46d2289e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -3127,7 +3077,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1260" />
@@ -3427,7 +3377,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="736" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="736" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
