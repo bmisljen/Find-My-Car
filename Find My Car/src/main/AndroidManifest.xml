@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lattitudeandlongitude.location"
+    package="com.findmycar.findcar"
     android:versionCode="2"
     android:versionName="3.0" >
 
@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name="com.lattitudeandlongitude.location.MainActivity"
+            android:name="com.findmycar.findcar.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" >
             <intent-filter>

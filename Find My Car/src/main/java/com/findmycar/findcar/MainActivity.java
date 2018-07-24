@@ -1,4 +1,4 @@
-package com.lattitudeandlongitude.location;
+package com.findmycar.findcar;
 
 import android.Manifest;
 import android.app.Activity;
@@ -10,12 +10,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
-import android.os.Handler;
 import android.os.Looper;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.AdapterView;
@@ -28,6 +26,7 @@ import android.widget.Toast;
 import android.app.AlertDialog;
 import android.text.InputType;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -43,6 +42,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.Serializable;
 import java.io.IOException;
@@ -70,6 +73,8 @@ public class MainActivity extends Activity {
     protected static final int REQUEST_CHECK_SETTINGS = 0x1;
     private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 34;
     private String m_Text = "";
+    private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
 
     /**
@@ -250,6 +255,28 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        // Init Admob ads
+        MobileAds.initialize(this, "ca-app-pub-4506968765738191~7811341338");
+
+        // load a banner ad
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        // create a new InterstitialAd object and load the ad
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-4506968765738191/5467398967");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        // show a new ad when the old one is closed
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+        });
+
         File file = new File(getDir("data", MODE_PRIVATE), "hashmap");
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
@@ -282,6 +309,13 @@ public class MainActivity extends Activity {
         map.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
+                // show a Interstitial Ad
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     if (locationUpdatesStarted == false) {
                         requestPermissions();
@@ -294,6 +328,7 @@ public class MainActivity extends Activity {
                                         // Got last known location. In some rare situations this can be null.
                                         if (location != null) {
                                             mCurrentLocation = location;
+                                            onLocationChanged();
                                             //start the map
                                             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + mCurrentLocation.getLatitude() + "," + mCurrentLocation.getLongitude() + "?q=" + mCurrentLocation.getLatitude() + "," + mCurrentLocation.getLongitude() + "(current Location)"));
                                             startActivity(intent);
@@ -308,6 +343,13 @@ public class MainActivity extends Activity {
         saveLocation.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
+                // show a Interstitial Ad
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                    if (locationUpdatesStarted == false) {
                        requestPermissions();
@@ -320,6 +362,7 @@ public class MainActivity extends Activity {
                                     // Got last known location. In some rare situations this can be null.
                                     if (location != null) {
                                         mCurrentLocation = location;
+                                        onLocationChanged();
                                     }
                                 }
                             });
@@ -378,7 +421,7 @@ public class MainActivity extends Activity {
                         // start the map to navigate to the location
                         arr = (new ArrayList<ArrayList<Double>>(hashmap.values())).get(item);
                         Uri gmmIntentUri = Uri.parse("google.navigation:q=" + String.valueOf(arr.get(0)) +
-                                "," + String.valueOf(arr.get(1)));
+                                "," + String.valueOf(arr.get(1)) + "&mode=w");
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
                         startActivity(mapIntent);
