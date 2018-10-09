@@ -20,11 +20,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable-v21'] } }
 }
 
 dependencies {
     implementation 'com.android.support:support-v4:28.+'
     implementation "com.google.android.gms:play-services-location:15.0.1"
-    implementation  "com.android.support:design:28.+"
+    implementation "com.android.support:design:28.+"
     implementation 'com.google.android.gms:play-services-ads:15.0.0'
 }

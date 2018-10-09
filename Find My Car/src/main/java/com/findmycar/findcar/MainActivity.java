@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
     private String m_Text = "";
     private AdView mAdView;
     private InterstitialAd mInterstitialAd;
-
+    private boolean adClicked = false;
 
     /**
      * Removes location updates from the FusedLocationApi.
@@ -309,12 +309,6 @@ public class MainActivity extends Activity {
         map.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                // show a Interstitial Ad
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
-                    Log.d("TAG", "The interstitial wasn't loaded yet.");
-                }
 
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     if (locationUpdatesStarted == false) {
@@ -343,11 +337,12 @@ public class MainActivity extends Activity {
         saveLocation.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                // show a Interstitial Ad
-                if (mInterstitialAd.isLoaded()) {
+                // show a Interstitial Ad only once when the button is clicked
+                if ((mInterstitialAd.isLoaded()) && (adClicked == false)) {
                     mInterstitialAd.show();
+                    adClicked = true;
                 } else {
-                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                    //Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
 
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -368,16 +363,38 @@ public class MainActivity extends Activity {
                             });
                 }
 
+                // add the locations to a char array
+                CharSequence[] savedLocations = new CharSequence[hashmap.size()];
+                int arrIndex = 0;
+                for ( String key : hashmap.keySet() ) {
+                    savedLocations[arrIndex++] = key;
+                }
+
                 // add the location to the arraylist
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Save Location");
+                builder.setTitle("Save Location (Click on location to update)");
 
                 // Set up the input
                 final EditText input = new EditText(MainActivity.this);
                 input.setHint("Type a location name");
-                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+
+                builder.setItems(savedLocations, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        // update the current location on click from the list
+                        String str = (new ArrayList<String>(hashmap.keySet())).get(item);
+                        arr.clear();
+                        arr.add(mCurrentLocation.getLatitude());
+                        arr.add(mCurrentLocation.getLongitude());
+                        hashmap.put(str, arr);
+                        String txt = "Location " + str + " updated in saved list";
+                        Toast toast = Toast.makeText(MainActivity.this, txt, Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                });
+
                 input.setInputType(InputType.TYPE_CLASS_TEXT);
                 builder.setView(input);
+
                 // Set up the buttons
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
@@ -388,7 +405,7 @@ public class MainActivity extends Activity {
                         arr.add(mCurrentLocation.getLatitude());
                         arr.add(mCurrentLocation.getLongitude());
                         hashmap.put(m_Text, arr);
-                        String txt = "Location " + m_Text + " added to Saved List";
+                        String txt = "Location " + m_Text + " added to saved list";
                         Toast toast = Toast.makeText(MainActivity.this, txt, Toast.LENGTH_SHORT);
                         toast.show();
                     }
@@ -399,6 +416,7 @@ public class MainActivity extends Activity {
                         dialog.cancel();
                     }
                 });
+
                 builder.show();
             }
         });
@@ -413,7 +431,7 @@ public class MainActivity extends Activity {
                     savedLocations[arrIndex++] = key;
                 }
 
-                // create an AlrtDialog to display this to the user
+                // create an AlertDialog to display this to the user
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Select Location (Long Click to Delete)");
                 builder.setItems(savedLocations, new DialogInterface.OnClickListener() {
@@ -436,7 +454,7 @@ public class MainActivity extends Activity {
                                 // on long press, delete the key value pair from the hashmap
                                 String str = (new ArrayList<String>(hashmap.keySet())).get(position);
                                 hashmap.remove(str);
-                                Toast toast = Toast.makeText(MainActivity.this, "Deleted Location From Favorites",
+                                Toast toast = Toast.makeText(MainActivity.this, "Deleted location from saved list",
                                         Toast.LENGTH_SHORT);
                                 toast.show();
                                 return true;

@@ -37,8 +37,8 @@
         android:layout_alignStart="@+id/button2"
         android:layout_below="@+id/button3"
         android:layout_marginTop="30dp"
-        android:background="#ADFF2F	"
-        android:gravity="center"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
         android:text="navigate to car" />
 
     <requestFocus />
